@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Photograph";
+  src: url(../fonts/Photograph_Signature.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+/*Auxiliares*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 1280px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+/*Header*/
+header {
+  width: 100%;
+  height: 10%;
+  border-bottom: #F47821 3px solid;
+  /*Logo*/
+  /*Navegação*/
+}
+header .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  width: 20%;
+  height: 100%;
+}
+header .logo #logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/logo-lilas.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header .menu-desktop {
+  width: 15%;
+  min-width: 200px;
+}
+header .menu-desktop ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .menu-desktop ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #90469B;
+}
+header .menu-desktop ul li a:hover {
+  color: #F47821;
+}
+/*Main*/
+main {
+  width: 100%;
+  height: 90%;
+}
+main .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .textos {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .chamada {
+  width: 70%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .container .chamada h1 {
+  font-family: "Photograph";
+  color: #90469B;
+  font-size: 58px;
+}
+main .container .chamada p {
+  color: #787878;
+  margin: 20px 0;
+}
+main .container .chamada .sociais {
+  width: 80%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .container .chamada .sociais a {
+  color: #90469B;
+}
+main .container .chamada .sociais a:hover {
+  color: #F47821;
+}
+/*Fotos*/
+main div.fotos {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main div.fotos .foto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  z-index: 1;
+}
+main div.fotos .foto #foto {
+  width: 100%;
+  height: 90%;
+  background-image: url(../imgs/anna_sales.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+main .circulo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#circulo {
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  background-color: #F47821;
+}
+@media screen and (max-width: 840px) {
+  /*Header*/
+  /*Logo*/
+  /*Navegação*/
+  /*Main*/
+  /*Chamada*/
+  /*Fotos*/
+  main div.fotos div.foto div#foto {
+    background-size: cover;
+  }
+  #circulo {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 720px) {
+  /*Header*/
+  header {
+    height: 15%;
+  }
+  header div.container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  /*Logo*/
+  header div.logo {
+    width: 80%;
+    height: 70%;
+    margin: auto 0;
+  }
+  /*Navegação*/
+  header div.container nav.menu-desktop {
+    margin: 10px 0;
+  }
+  /*Main*/
+  main div.container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main div.textos {
+    width: 100%;
+    height: auto;
+  }
+  /*Chamada*/
+  main div.chamada {
+    width: 80%;
+    height: 100%;
+  }
+  /*Fotos*/
+  main div.fotos {
+    width: 100%;
+    height: 100%;
+  }
+  #circulo {
+    width: 300px;
+    height: 300px;
+  }
+  main div.fotos div.foto div#foto {
+    background-size: contain;
+  }
+}
